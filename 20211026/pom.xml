@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>co.micol.prj</groupId>
+  <artifactId>20211026</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <properties> <!-- 내부에서 사용할 변수를 설정 하는 곳 -->
+  	
+  </properties>
+  
+  <dependencies> <!-- 필요한 외부 라이브러리 넣는곳 -->
+	 <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>3.1.0</version>
+	    <scope>provided</scope>
+	</dependency>
+  
+ 	<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc8 -->
+	<dependency>
+	    <groupId>com.oracle.database.jdbc</groupId>
+	    <artifactId>ojdbc8</artifactId>
+	    <version>19.3.0.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	
+  
+  </dependencies>
+  
+  <build> <!-- 컴파일 또는 배포시 필요한 라이브러리 또는 환경설정 -->
+  	<resources> <!-- 외부에 필요한 파일이 있는 저장소를 설정 -->
+  		<resource>
+  			<directory>src/main/resources</directory>
+  		</resource>
+  	</resources>
+  	
+  	
+  </build>
+</project>
