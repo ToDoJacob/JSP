@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib = uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:forEach items="${notices }" var="notice">
+	<jsp:include page="../home/header.jsp"></jsp:include>
+	<div align="center">
+		<div>
+			<h1>Notice</h1>
+		</div>
+		<c:forEach items="${notices }" var="notice">
 	${notice.nid } : ${notice.name } : ${notice.title } : ${notice.writeDate } <br>
-</c:forEach>
+		</c:forEach>
 </body>
 </html>

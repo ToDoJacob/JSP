@@ -11,12 +11,7 @@
 <jsp:include page="header.jsp"></jsp:include>
 <div align="center">
 	<div><h1>여기는 홈페이지 입니다.</h1></div>
-	<a href="memberList.do">멤버목록</a><p>
-	<c:if test="${not empty id }">
-		<a href="memberSelect.do">내정보 조회</a><p>
-	</c:if>
-	<a href="noticeList.do">게시글 목록</a><p>
-	<a href="memberLoginForm.do">로그인</a>
+
 </div>
 </body>
 </html>

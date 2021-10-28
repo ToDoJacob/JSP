@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div align="center">
+<jsp:include page="../home/header.jsp"></jsp:include>
+<div align="center">
 		<div>
 			<h1>로 그 인</h1>
 		</div>

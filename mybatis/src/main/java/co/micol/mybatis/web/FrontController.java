@@ -13,9 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.mybatis.comm.Command;
 import co.micol.mybatis.command.HomeCommand;
+import co.micol.mybatis.command.MemberJoinForm;
 import co.micol.mybatis.command.MemberList;
 import co.micol.mybatis.command.MemberLogin;
 import co.micol.mybatis.command.MemberLoginForm;
+import co.micol.mybatis.command.MemberLogout;
 import co.micol.mybatis.command.MemberSelect;
 import co.micol.mybatis.command.NoticeList;
 
@@ -35,6 +37,8 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeList.do", new NoticeList()); //게시글 목록
 		map.put("/memberLoginForm.do", new MemberLoginForm()); //로그인폼 호출
 		map.put("/memberLogin.do", new MemberLogin()); //로그인 처리
+		map.put("/memberLogout.do", new MemberLogout()); //로그 아웃
+		map.put("/memberJoinForm.do", new MemberJoinForm()); //회원가입폼 호출
 		
 	}
 
