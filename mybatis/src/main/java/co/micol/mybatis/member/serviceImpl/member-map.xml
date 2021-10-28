@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.micol.mybatis.member.service.MemberMapper">   <!-- MemberMapper 가지고 있는 메소드 명을 사용함  -->
+
+   <select id="memberSelectList" resultType="co.micol.mybatis.member.service.MemberVO">
+      select * from member
+   </select>
+   <!-- 멤버 인터페이스의 명을 그대로 사용함 -->
+   <select id="memberSelect" resultType="co.micol.mybatis.member.service.MemberVO">
+      select * from member where id = #{id} <!-- 이 아이디는 vo객체와 이름이 같아야함  -->
+      <if test="password != null">	<!-- 로그인 체크하는 부분 ,  -->
+      AND password = #{password}
+      </if>
+   </select>
+   
+   <insert id="memberInsert" parameterType="co.micol.mybatis.member.service.MemberVO">
+      insert into member values(#{id}, #{password}, #{name}, #{address}, #{tel}, #{author})
+   </insert>
+   
+   <update id="memberUpdate" parameterType="co.micol.mybatis.member.service.MemberVO">
+      update member set password = #{password}, author = #{author} where id = #{id}
+   </update>
+   
+   <delete id="memberDelete" parameterType="co.micol.mybatis.member.service.MemberVO">
+      delete from member where id = #{id}
+   </delete>
+
+</mapper>
