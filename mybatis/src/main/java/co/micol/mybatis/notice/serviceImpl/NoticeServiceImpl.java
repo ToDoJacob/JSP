@@ -9,7 +9,7 @@ import co.micol.mybatis.notice.service.NoticeMapper;
 import co.micol.mybatis.notice.service.NoticeService;
 import co.micol.mybatis.notice.service.NoticeVO;
 
-public class NoticeSeviceImpl implements NoticeService {
+public class NoticeServiceImpl implements NoticeService {
 	private SqlSession sqlSession = DataSource.getInstance().openSession(true);
 	private NoticeMapper map = sqlSession.getMapper(NoticeMapper.class);
 	
@@ -41,6 +41,11 @@ public class NoticeSeviceImpl implements NoticeService {
 	public int noticeUpdate(NoticeVO vo) {
 		// TODO Auto-generated method stub
 		return map.noticeUpdate(vo);
+	}
+	@Override
+	public int hitUpdate(NoticeVO vo) {
+		// TODO Auto-generated method stub
+		return map.hitUpdate(vo);
 	}
 
 }

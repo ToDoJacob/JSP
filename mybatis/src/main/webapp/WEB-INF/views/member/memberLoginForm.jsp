@@ -10,21 +10,21 @@
 <jsp:include page="../home/header.jsp"></jsp:include>
 <div align="center">
 		<div>
-			<h1>로 그 인</h1>
+			<h1>Login</h1>
 		</div>
 		<div>
 			<form id="frm" action="memberLogin.do" method="post">
 			<div>
 			<table border="1">
 				<tr>
-					<th width="150">아이디</th>
+					<th width="150">ID</th>
 					<td width="200"><input type="text" id="id" name="id" required="required"
-						placeholder="아이디를 입력하세요."></td>
+					></td>
 				</tr>
 				<tr>
-					<th width="150">패스워드</th>
+					<th width="150">PASSWORD</th>
 					<td width="200"><input type="password" id="password" name="password"
-						required="required" placeholder="비밀번호를 입력하세요."></td>
+						required="required"></td>
 				</tr>
 			</table>
 			</div><br>

@@ -21,13 +21,13 @@ public class MemberLogin implements Command {
 		vo.setPassword(request.getParameter("password"));
 		vo = memberDao.memberSelect(vo);
 		if(vo != null) {
-			request.setAttribute("message", vo.getName()+"님 환영합니다.");
+			request.setAttribute("message", "Welcome !"+vo.getName());
 			session.setAttribute("id", vo.getId());
 			session.setAttribute("author", vo.getAuthor());
 			session.setAttribute("name", vo.getName());
 			
 		}else {
-			request.setAttribute("message", "아이디 또는 패스워드가 틀렸습니다.");
+			request.setAttribute("message", "ID or PASSWORD is incorrect.");
 		}
 		return "member/memberLogin";
 	}

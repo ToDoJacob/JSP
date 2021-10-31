@@ -10,7 +10,8 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div align="center">
-	<div><h1>여기는 홈페이지 입니다.</h1></div>
+	<div><h1>${message }</h1></div>
+	
 
 </div>
 </body>

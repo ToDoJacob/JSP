@@ -20,6 +20,10 @@
 		where nid = #{nid}
 	</update>
 	
+	<update id="hitUpdate">
+		update notice set hit = hit + 1 where nid = ${nid}
+	</update>
+	
 	<delete id="noticeDelete">
 		delete from notice where nid = #{nid}
 	</delete>

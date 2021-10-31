@@ -13,13 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.mybatis.comm.Command;
 import co.micol.mybatis.command.HomeCommand;
+import co.micol.mybatis.command.MemberJoin;
 import co.micol.mybatis.command.MemberJoinForm;
 import co.micol.mybatis.command.MemberList;
 import co.micol.mybatis.command.MemberLogin;
 import co.micol.mybatis.command.MemberLoginForm;
 import co.micol.mybatis.command.MemberLogout;
 import co.micol.mybatis.command.MemberSelect;
+import co.micol.mybatis.command.NoticeForm;
+import co.micol.mybatis.command.NoticeInsert;
 import co.micol.mybatis.command.NoticeList;
+import co.micol.mybatis.command.NoticeSelect;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -39,7 +43,10 @@ public class FrontController extends HttpServlet {
 		map.put("/memberLogin.do", new MemberLogin()); //로그인 처리
 		map.put("/memberLogout.do", new MemberLogout()); //로그 아웃
 		map.put("/memberJoinForm.do", new MemberJoinForm()); //회원가입폼 호출
-		
+		map.put("/memberJoin.do", new MemberJoin()); //회원가입 처리
+		map.put("/noticeForm.do", new NoticeForm()); //게시글작성 폼
+		map.put("/noticeSelect.do",  new NoticeSelect()); //게시글 한개 조회
+		map.put("/noticeInsert.do", new NoticeInsert()); //게시글 입력
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
