@@ -12,11 +12,11 @@
 	insert into member values(#{id},#{password},#{name},#{address},#{tel},#{author})
 </insert>
 
-<delete id="deleteMember">
+<delete id="deleteMember" parameterType="co.jacob.prj.member.service.MemberVO">
 
 </delete>
 
-<update id="updateMember">
+<update id="updateMember" parameterType="co.jacob.prj.member.service.MemberVO">
 
 </update>
 

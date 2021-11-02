@@ -12,11 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.jacob.prj.comm.Command;
+import co.jacob.prj.command.AjaxMemberList;
+import co.jacob.prj.command.AjaxTest;
+import co.jacob.prj.command.Charts;
 import co.jacob.prj.command.HomeCommand;
 import co.jacob.prj.command.Logout;
 import co.jacob.prj.command.MemberList;
 import co.jacob.prj.command.MemberLoginForm;
+import co.jacob.prj.command.RegisterForm;
 import co.jacob.prj.command.memberLogin;
+import co.jacob.prj.command.registerMember;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -33,6 +38,11 @@ public class FrontController extends HttpServlet {
 		map.put("/memberLoginForm.do", new MemberLoginForm()); //로그인폼 호출
 		map.put("/memberLogin.do", new memberLogin()); //로그인 처리
 		map.put("/memberList.do", new MemberList()); //멤버 목록
+		map.put("/registerForm.do", new RegisterForm()); //회원가입 폼 호출
+		map.put("/registerMember.do", new registerMember()); //회원가입 처리
+		map.put("/charts.do", new Charts()); //차트 보여주기
+		map.put("/ajaxTest.do", new AjaxTest()); //ajax Test Form
+		map.put("/ajaxMemberList.do", new AjaxMemberList()); //실제 처리
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

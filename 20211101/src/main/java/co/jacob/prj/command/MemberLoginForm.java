@@ -9,7 +9,7 @@ public class MemberLoginForm implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {
-		return "member/memberLoginForm.jsp";
+		return "member/memberLoginForm";
 	}
 
 }
